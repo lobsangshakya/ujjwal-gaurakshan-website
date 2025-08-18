@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// index.css
+body {
+  background-color: #FFF7ED;
+  color: #1F2937;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  background-color: #F59E0B;
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar a.active {
+  color: #16A34A;
+  font-weight: bold;
+}
+
+button, .btn, .donate-button {
+  background-color: #F97316;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover, .btn:hover, .donate-button:hover {
+  background-color: #EA580C;
+  transform: scale(1.05);
+}
+
+.card, .donation-box, .activity-item {
+  background-color: white;
+  border: 1px solid #E5E7EB;
+  border-left: 5px solid #16A34A;
+  border-radius: 12px;
+  padding: 1.25rem;
+  transition: 0.3s ease;
+}
+
+.card:hover, .donation-box:hover {
+  background-color: #FEF3C7;
+}
+
+h1, h2, h3 {
+  color: #1F2937;
+}
+
+a {
+  color: #F97316;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #EA580C;
+}
+
+.section {
+  background-color: #FFF7ED;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}

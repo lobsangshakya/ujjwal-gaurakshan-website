@@ -1,0 +1,46 @@
+/* Global donate page styles */
+
+.donate-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, #fef9c3, #fcd34d, #fde68a); /* warm gold gradient */
+  padding: 2rem;
+}
+
+.donate-container {
+  width: 100%;
+  max-width: 900px;
+  background: #fffefc;
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.donate-header {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  color: #92400e;
+  margin-bottom: 1.5rem;
+}
+
+.donation-form {
+  border: none;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
