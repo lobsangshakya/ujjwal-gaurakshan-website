@@ -1,46 +1,88 @@
-/* Global donate page styles */
-
-.donate-page {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: linear-gradient(to right, #fef9c3, #fcd34d, #fde68a); /* warm gold gradient */
-  padding: 2rem;
+/* Donation Form Fields */
+.donation-form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #78350f;
 }
 
-.donate-container {
+.donation-form input,
+.donation-form select,
+.donation-form textarea {
   width: 100%;
-  max-width: 900px;
-  background: #fffefc;
-  border-radius: 1rem;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  animation: fadeIn 1s ease-in-out;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
-.donate-header {
-  font-size: 1.8rem;
+.donation-form input:focus,
+.donation-form select:focus,
+.donation-form textarea:focus {
+  border-color: #fbbf24;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.3);
+}
+
+/* Donation Amount Buttons */
+.donation-amounts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+
+.amount-btn {
+  flex: 1 1 100px;
+  padding: 0.75rem 1.2rem;
+  border: 2px solid #facc15;
+  border-radius: 0.75rem;
+  background: #fefce8;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #92400e;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.amount-btn:hover {
+  background: #fde68a;
+  border-color: #fbbf24;
+}
+
+.amount-btn.active {
+  background: #fbbf24;
+  color: #fff;
+  border-color: #f59e0b;
+}
+
+/* Submit Button */
+.submit-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(to right, #f59e0b, #d97706);
+  color: white;
+  font-size: 1.1rem;
   font-weight: 600;
   text-align: center;
-  color: #92400e;
-  margin-bottom: 1.5rem;
-}
-
-.donation-form {
   border: none;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  width: 100%;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
