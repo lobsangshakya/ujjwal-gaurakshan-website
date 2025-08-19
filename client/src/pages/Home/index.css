@@ -3,20 +3,27 @@
   min-height: 100vh;
   padding-left: 1rem;
   padding-right: 1rem;
-  background: linear-gradient(to bottom right, #fffaf0, #fefce8); /* Warm light gradient */
+  background: linear-gradient(to bottom right, #fffaf0, #fefce8);
+  font-family: "Inter", sans-serif;
 }
 
+/* Body title  */
 .trust-title {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 800;
   text-transform: uppercase;
-  color: #d97706; /* Tailwind amber-700 */
+  color: #d97706;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
   text-align: center;
-  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.15);
+  letter-spacing: 1px;
+  text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(to right, #d97706, #f59e0b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+/* Image BG */
 .image-wrapper {
   display: flex;
   justify-content: center;
@@ -26,10 +33,17 @@
 .trust-image {
   width: 100%;
   max-width: 80rem;
-  border-radius: 1rem;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 1.5rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+  border: 4px solid rgba(255, 255, 255, 0.6);
+  transition: transform 0.4s ease;
 }
 
+.trust-image:hover {
+  transform: scale(1.02);
+}
+
+/* Work (What we do) */
 .what-we-do-section {
   margin-top: 4rem;
   display: flex;
@@ -38,22 +52,23 @@
 }
 
 .what-we-do-box {
-  background: #fffefc;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
   border: 2px solid #fde68a;
-  border-radius: 1rem;
-  padding: 2rem;
+  border-radius: 1.25rem;
+  padding: 2.5rem;
   max-width: 80rem;
   width: 100%;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
 .section-heading {
   font-size: 2.25rem;
-  font-weight: bold;
+  font-weight: 800;
   color: #b45309;
   text-align: center;
   margin-bottom: 2rem;
-  text-shadow: 1px 1px 1px #fef3c7;
+  text-shadow: 1px 1px 2px #fde68a;
 }
 
 .activities-grid {
@@ -67,13 +82,13 @@
 
 @media (min-width: 768px) {
   .trust-title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-top: 2rem;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
   }
 
   .section-heading {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
   }
 
   .activities-grid {
@@ -81,24 +96,40 @@
   }
 }
 
+.activity-item {
+  background: linear-gradient(to bottom right, #fffefc, #fdf4e2);
+  border-radius: 1rem;
+  padding: 1.75rem;
+  border: 2px solid transparent;
+  border-image: linear-gradient(45deg, #fde68a, #fcd34d) 1;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.activity-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(251, 191, 36, 0.25);
+}
+
 .activity-item h3 {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: #ca8a04; /* Tailwind yellow-700 */
+  margin-bottom: 0.75rem;
+  color: #ca8a04;
 }
 
+/* Donations  */
 .donate-section {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 .donate-title {
   font-size: 2.5rem;
-  font-weight: 800;
+  font-weight: 900;
   margin-bottom: 1rem;
-  color: #c2410c; /* Tailwind orange-700 */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  color: #c2410c;
+  text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.1);
 }
 
 .donate-subtitle {
@@ -109,20 +140,22 @@
 }
 
 .donate-button {
-  background: linear-gradient(to right, #f59e0b, #fbbf24); /* Gradient amber */
+  background: linear-gradient(to right, #f59e0b, #fbbf24);
   color: white;
-  padding: 0.75rem 1.75rem;
+  padding: 0.85rem 2rem;
   border-radius: 9999px;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.1rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 14px rgba(251, 191, 36, 0.5);
+  box-shadow: 0 6px 18px rgba(251, 191, 36, 0.5);
 }
 
 .donate-button:hover {
   background: linear-gradient(to right, #facc15, #eab308);
+  transform: scale(1.05);
 }
 
+/* Donations options  */
 .donation-amount-title {
   font-size: 1.5rem;
   font-weight: 700;
@@ -134,7 +167,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .donation-label {
@@ -142,17 +175,23 @@
 }
 
 .donation-box {
-  padding: 0.75rem 1.5rem;
+  padding: 0.85rem 1.75rem;
   border: 2px solid #facc15;
   border-radius: 9999px;
   background-color: #fff7ed;
   transition: all 0.3s ease;
   font-weight: 600;
   color: #92400e;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.donation-box:hover {
+  background-color: #fef9c3;
+  transform: translateY(-3px);
 }
 
 input[type="radio"].peer:checked + .donation-box {
   background-color: #facc15;
   color: white;
-  box-shadow: 0 0 0 2px #fef9c3;
+  box-shadow: 0 0 0 3px #fef9c3, 0 0 20px rgba(234, 179, 8, 0.6);
 }
